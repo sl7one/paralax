@@ -1,0 +1,107 @@
+:root {
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.hero {
+  perspective: 1000px;
+  overflow: hidden;
+}
+
+.hero__wrapper {
+  height: 100vh;
+  transform-style: preserve-3d;
+  transform: rotateX(var(--move-y)) rotateY(var(--move-x));
+  will-change: transform;
+  transition: transform 2ms ease-in-out;
+}
+
+.hero__item {
+  inset: -10vw;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.layer-1 {
+  transform: translateZ(-200px) scale(1.5);
+  backdrop-filter: blur(10px);
+}
+
+.layer-8 {
+  transform: translateZ(-50px) translateY(-100px) scale(1.25);
+}
+
+.layer-2 {
+  transform: translateZ(-150px) scale(1.15);
+}
+.layer-3 {
+  transform: translateZ(20px);
+}
+
+.layer-4 {
+  transform: translateZ(50px);
+}
+
+.layer-5 {
+  transform: translateZ(-20px);
+}
+.layer-6 {
+  transform: translateZ(-50px);
+}
+
+.layer-6 {
+  transform: translateZ(70px);
+}
+
+.layer-9 {
+  max-width: 50vw;
+
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) translateZ(70px);
+  color: rgb(0, 0, 0, 0.8);
+  /* transform: translateZ(-20px); */
+}
+
+.layer-9 h1 {
+  background: linear-gradient(to left, #ff0000 0%, #ffff00 50%, #ff6600 120%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 0.35em;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 900;
+  font-size: 72px;
+  text-transform: uppercase;
+  color: orange;
+  transform-origin: 0 0;
+  transform: scaleX(1.2);
+}
+
+.layer-9 p {
+  padding: 15px;
+  margin-top: 10px;
+  font-size: 18px;
+  color: black;
+
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.layer-9 button {
+  outline: none;
+  border: none;
+  display: block;
+  width: 150px;
+  margin-top: 10px;
+  padding: 15px;
+  font-size: 18px;
+  color: white;
+  background-color: orange;
+  margin-left: auto;
+  cursor: pointer;
+}
